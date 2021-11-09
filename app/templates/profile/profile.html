@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+<div class="card">
+  <div class="row">
+
+  
+<!-- displaying  Username-->
+  <div class="col-md-6">
+    <h3>Name: {{user.username| capitalize}} </h3>
+
+  <!--Display profile photo-->
+  
+
+    {% if user.profile_pic_path %}
+    <img  src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail img-circle img-responsive">
+    {%else%}
+    <p>No profile picture</p>
+    {% endif %}
+    <br>
+
+    {% if user == current_user %}
+    <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
+
+      <input type="file"  name="photo" class="form-control" required>
+      <input type="submit">
+    </form>
+      {% endif %}
+
+      {% if user == current_user %}
+      
+         <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+      
+      {% endif %}
+  </div>
+
+      <div class="col-md-6">
+            <!--Displaying user bio-->
+    {% if user.bio %}
+    <h3>Bio :</h3>
+      <p> {{user.bio}}</p>
+    {%else%}
+      <p> {{user.username| capitalize}} has no bio </p>
+    {% endif %}
+    </div>
+
+    
+      
+      
+ 
+</div>
+</div>
+</div>
+<br>
+
+<h3>My Pitches</h3>
+{%if current_user%}
+{%for pitch in my_pitches%}
+<div class="row ">
+  <div class="col-md-6 mb-3">
+    <!-- Card -->
+    <div class="card">
+      <!--Card content-->
+      <div class="card-body">
+        <h5>Name: {{pitch.author.username}}</h5>
+
+        <h6 class="card-title">Category: {{pitch.category}}</h6>
+        <!--Text-->
+        <p class="card-text"> Pitch: {{pitch.pitch}}</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <a href="{{url_for('main.new_comment', pitch_id =pitch.id)}}"> <button type="button" class="btn btn-light-blue btn-md">Comment</button></button></a> 
+        <a href=""><button><i class="fab fa-gratipay fa-2x"></i></button></a>
+       <a href=""><button><i class="fas fa-heart-broken fa-2x"></i></button></a> 
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+</div>
+{%endfor%}
+{%endif%}
+{%endblock%}
