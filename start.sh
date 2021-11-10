@@ -5,5 +5,4 @@ export MAIL_PASSWORD='5431140'
 
 
 
-
 python3 manage.py server
