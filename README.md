@@ -1,4 +1,4 @@
-# Title: PITCH-LAB
+# Title: PITCHES
 
 ## Description:
 Pitchlab is a web application in which guys can input pitches and have others comment on them and upvote or downvote them. 
@@ -15,11 +15,11 @@ When in the application, sign up using your email address and a password of your
 This application was built in Python language using the Flask framework
 
 ## Author:
-Name: Ebenezer Gakuo
+Name: morrison Njenga
 Github:
 email:
 
 ## Licence :
-MIT License: https://raw.githubusercontent.com/Ebay-droid/Pitches/master/LICENSE
+MIT License: 
 
-Copyright (c) 2020 Ebenezer Gakuo
+Copyright (c) 2021 Morrison Njenga
