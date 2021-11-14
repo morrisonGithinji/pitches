@@ -3,7 +3,7 @@ import os
 class Config:
 
     SECRET_KEY="just a key"
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ebay:qwerty@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://morrison:5431140ch@localhost/pitch'
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
