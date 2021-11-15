@@ -1,7 +1,7 @@
 # Title: PITCHES
 
 ## Description:
-Pitchlab is a web application in which guys can input pitches and have others comment on them and upvote or downvote them. 
+Pitches is a web application in which guys can input pitches and have others comment on them and upvote or downvote them. 
 
 ## Installation :
 Simply clone the repo or fork it then once you run the code on your editor of choice, then you  on your terminal type 'python manage.py server.
