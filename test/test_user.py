@@ -5,13 +5,13 @@ import unittest
 class UserModelTest(unittest.TestCase):
 
   def setUp(self):
-    self.user_ebay = User(username ='Ebay', email = 'ebay@gmail.com', pass_secure = '12345')
+    self.user_ebay = User(username ='morriosn', email = 'morrison.githinji@student.moringaschool.com', pass_secure = '12345')
     
     
     
   def test_check_instance(self):
-      self.assertEquals(self.user_ebay.username, 'Ebay')
-      self.assertEquals(self.user_ebay.email,'ebay@gmail.com')
+      self.assertEquals(self.user_ebay.username, 'morrison')
+      self.assertEquals(self.user_ebay.email,'morrison.githinji@student.moringaschool.com')
       self.assertEquals(self.user_ebay.pass_secure,'12345')
     
   def test_password_setter(self):
