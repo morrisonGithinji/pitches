@@ -5,7 +5,7 @@ import unittest
 class UserModelTest(unittest.TestCase):
 
   def setUp(self):
-    self.user_ebay = User(username ='morriosn', email = 'morrison.githinji@student.moringaschool.com', pass_secure = '12345')
+    self.user_ebay = User(username ='morrison', email = 'morrison.githinji@student.moringaschool.com', pass_secure = '12345')
     
     
     
